@@ -92,7 +92,7 @@ a:hover { opacity: 0.8; }
     position: fixed;
     inset: 0;
     z-index: 0;
-    opacity: 0.04;
+    opacity: 0.12;
     pointer-events: none;
 }
 

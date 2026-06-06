@@ -80,17 +80,26 @@ function initMatrix() {
     const drops = Array(columns).fill(1);
     const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF';
 
+    let frameCount = 0;
+
     function draw() {
-        ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+        frameCount++;
+        // Only update every 3rd frame to slow down the rain
+        if (frameCount % 3 !== 0) {
+            requestAnimationFrame(draw);
+            return;
+        }
+
+        ctx.fillStyle = 'rgba(17, 17, 17, 0.03)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#00ff41';
+        ctx.fillStyle = '#00e639';
         ctx.font = fontSize + 'px monospace';
 
         for (let i = 0; i < drops.length; i++) {
             const char = chars[Math.floor(Math.random() * chars.length)];
             ctx.fillText(char, i * fontSize, drops[i] * fontSize);
 
-            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
                 drops[i] = 0;
             }
             drops[i]++;
