@@ -53,7 +53,6 @@ function bootSequence() {
 
 /* --- Init All Modules --- */
 function initAll() {
-    initMatrix();
     initTypeWriter();
     initScrollAnimations();
     initNavigation();
@@ -62,52 +61,6 @@ function initAll() {
     initCoverLetter();
     updateClock();
     setInterval(updateClock, 1000);
-}
-
-/* --- Matrix Rain --- */
-function initMatrix() {
-    const canvas = document.getElementById('matrix-bg');
-    const ctx = canvas.getContext('2d');
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    resize();
-    window.addEventListener('resize', resize);
-
-    const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(1);
-    const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF';
-
-    let frameCount = 0;
-
-    function draw() {
-        frameCount++;
-        // Only update every 3rd frame to slow down the rain
-        if (frameCount % 3 !== 0) {
-            requestAnimationFrame(draw);
-            return;
-        }
-
-        ctx.fillStyle = 'rgba(17, 17, 17, 0.03)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#00e639';
-        ctx.font = fontSize + 'px monospace';
-
-        for (let i = 0; i < drops.length; i++) {
-            const char = chars[Math.floor(Math.random() * chars.length)];
-            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-
-            if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
-                drops[i] = 0;
-            }
-            drops[i]++;
-        }
-        requestAnimationFrame(draw);
-    }
-    draw();
 }
 
 /* --- TypeWriter --- */
@@ -229,7 +182,6 @@ function initTerminal() {
             { text: '  contact     — Get in touch', cls: 'output' },
             { text: '  neofetch    — System info', cls: 'output' },
             { text: '  clear       — Clear terminal', cls: 'output' },
-            { text: '  matrix      — Toggle matrix rain', cls: 'output' },
             { text: '  theme       — Cycle terminal color', cls: 'output' },
             { text: '  sudo        — ???', cls: 'output' },
         ],
@@ -283,13 +235,6 @@ function initTerminal() {
         clear: () => {
             output.innerHTML = '';
             return [];
-        },
-
-        matrix: () => {
-            const canvas = document.getElementById('matrix-bg');
-            const current = parseFloat(getComputedStyle(canvas).opacity);
-            canvas.style.opacity = current > 0.05 ? '0' : '0.07';
-            return [{ text: 'Matrix rain ' + (current > 0.05 ? 'disabled' : 'enabled'), cls: 'success' }];
         },
 
         theme: () => {

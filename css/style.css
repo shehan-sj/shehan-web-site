@@ -87,15 +87,7 @@ a:hover { opacity: 0.8; }
 .boot-line { opacity: 0; animation: boot-appear 0.05s forwards; }
 @keyframes boot-appear { to { opacity: 1; } }
 
-/* --- Matrix & Scanlines --- */
-#matrix-bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    opacity: 0.12;
-    pointer-events: none;
-}
-
+/* --- Scanlines --- */
 .scanlines {
     position: fixed;
     inset: 0;
