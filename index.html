@@ -77,6 +77,9 @@
                                 <p class="hero-tagline">QA Leader with <span class="highlight-green">14+ years</span> scaling quality organizations across <span class="highlight-cyan">Life Sciences</span>, <span class="highlight-amber">Fintech</span>, and <span class="highlight-magenta">Enterprise Security</span>.</p>
                                 <p class="hero-tagline">Early adopter of <span class="highlight-green">AI/ML in QA</span>. Building tools that ship quality at scale.</p>
                                 <p class="hero-location"><span class="dim">// </span>Kitchener, Ontario, Canada <span class="dim">|</span> Remote</p>
+                                <div class="hero-actions">
+                                    <a href="assets/resume.pdf" target="_blank" class="btn-resume">📄 View Resume</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -684,6 +687,49 @@
         </footer>
     </div>
 
+    <!-- Cover Letter Modal (hidden) -->
+    <div id="cover-letter-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">generate-cover-letter</span>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+
+            <!-- Step 1: Pick template -->
+            <div id="cl-step-1" class="modal-step">
+                <p class="output-comment"># Select a template:</p>
+                <div class="cl-templates">
+                    <button class="cl-template-btn" data-template="senior-qa">Senior QA Engineer</button>
+                    <button class="cl-template-btn" data-template="qa-lead">QA Lead</button>
+                    <button class="cl-template-btn" data-template="qa-manager">QA Manager</button>
+                    <button class="cl-template-btn" data-template="gen-ai-qa">Gen AI QA Agent</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Enter details -->
+            <div id="cl-step-2" class="modal-step" style="display:none;">
+                <p class="output-comment"># Enter job details:</p>
+                <div class="cl-form">
+                    <label>Company name:
+                        <input type="text" id="cl-company" placeholder="e.g. Anthropic" autocomplete="off">
+                    </label>
+                    <label>Job title:
+                        <input type="text" id="cl-job-title" placeholder="e.g. Senior QA Engineer" autocomplete="off">
+                    </label>
+                    <button class="cl-generate-btn" id="cl-generate">Generate PDF</button>
+                    <button class="cl-back-btn" id="cl-back">&larr; Back</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Done -->
+            <div id="cl-step-3" class="modal-step" style="display:none;">
+                <p class="cl-success">✓ Cover letter generated and downloading...</p>
+                <button class="cl-template-btn" id="cl-another">Generate Another</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
