@@ -4,7 +4,7 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "D:\\Projects\\shehan", "-l", "3456"],
+      "runtimeArgs": ["serve", "D:\\Projects\\shehan-web-site", "-l", "3456"],
       "port": 3456
     }
   ]

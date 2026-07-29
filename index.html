@@ -1,732 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rajiv@portfolio: ~</title>
-    <meta name="description" content="Rajiv Silva — Senior Validation Engineer & QA Leader with 14+ years of experience.">
-    <meta property="og:title" content="Rajiv Silva — Portfolio">
-    <meta property="og:description" content="Senior Validation Engineer & QA Leader | 14+ Years | AI-Powered QA">
-    <meta property="og:image" content="assets/pixel-avatar.png">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬛</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajiv Silva — QA Leadership</title>
+<meta name="description" content="Rajiv Silva — QA leader with 15+ years building and leading quality organizations across regulated life sciences, fintech, and enterprise security. Core QA to QA architecture to AI implementation.">
+<meta property="og:title" content="Rajiv Silva — QA Leadership">
+<meta property="og:description" content="15+ years across regulated life sciences, fintech, and enterprise security. Core QA to QA architecture to AI implementation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a1020'/><text x='50' y='67' font-size='46' font-family='Inter,sans-serif' font-weight='700' fill='%236f9dea' text-anchor='middle'>RS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  document.documentElement.classList.add('js');
+  /* Restore a saved palette before first paint, otherwise the default
+     would render briefly and then swap. */
+  try {
+    var saved = localStorage.getItem('palette');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) { /* storage blocked — the default palette is fine */ }
+</script>
 </head>
 <body>
 
-    <!-- Boot Sequence Overlay -->
-    <div id="boot-screen">
-        <div id="boot-log"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-name">Rajiv Silva</a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="#work">Case Studies</a>
+      <a href="#career">Career</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Résumé</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══════════ OPENING ═══════════ -->
+  <section class="wrap opening">
+    <p class="eyebrow" data-reveal>QA Leadership · 15+ Years</p>
+    <h1 data-reveal>Quality is a system. I build the <em>system</em>, and the team that runs it.</h1>
+    <p class="standfirst" data-reveal>
+      Fifteen years across <b>regulated life sciences</b>, <b>live-money fintech</b>, and
+      <b>enterprise security</b> — from hands-on test engineering to QA architecture to
+      leading the teams. I go into environments where quality is unproven and leave behind
+      frameworks, pipelines, standards, and people who can keep it running.
+    </p>
+    <div class="opening-actions" data-reveal>
+      <a href="#work" class="btn btn-solid">Read the case studies</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download résumé</a>
     </div>
 
-    <!-- Scanline Overlay -->
-    <div class="scanlines"></div>
+    <div class="range">
+      <div class="range-col" data-reveal>
+        <h2>Industries</h2>
+        <ul>
+          <li>Life Sciences <span>Regulated</span></li>
+          <li>Fintech &amp; Crypto <span>Live funds</span></li>
+          <li>Enterprise Security <span>Encryption</span></li>
+          <li>Travel Technology <span>Platform</span></li>
+          <li>Gaming <span>Where it began</span></li>
+        </ul>
+      </div>
+      <div class="range-col" data-reveal>
+        <h2>Platforms</h2>
+        <ul>
+          <li>Web <span>Cross-browser</span></li>
+          <li>Mobile <span>iOS &amp; Android</span></li>
+          <li>Desktop <span>Win · Mac · Linux</span></li>
+          <li>API &amp; Services <span>Integration</span></li>
+          <li>Cloud &amp; CI <span>Pipelines</span></li>
+        </ul>
+      </div>
+      <div class="range-col" data-reveal>
+        <h2>Scope</h2>
+        <ul>
+          <li>QA Manager <span>Strategy · Team</span></li>
+          <li>QA Team Lead <span>Two companies</span></li>
+          <li>Automation Architect <span>Frameworks</span></li>
+          <li>Validation Engineer <span>Regulated</span></li>
+          <li>DevOps &amp; Release <span>Gating</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Terminal Window -->
-    <div class="terminal-window" id="terminal-window">
-
-        <!-- Title Bar -->
-        <header class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn-close"></span>
-                <span class="btn-minimize"></span>
-                <span class="btn-maximize"></span>
-            </div>
-            <div class="terminal-title">rajiv@portfolio: ~</div>
-            <nav class="terminal-nav" id="nav">
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#home" class="active">~/home</a></li>
-                    <li><a href="#about">~/about</a></li>
-                    <li><a href="#experience">~/xp</a></li>
-                    <li><a href="#skills">~/skills</a></li>
-                    <li><a href="#projects">~/projects</a></li>
-                    <li><a href="#education">~/edu</a></li>
-                    <li><a href="#contact">~/contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Terminal Body -->
-        <main class="terminal-body">
-
-            <!-- HOME / HERO -->
-            <section id="home" class="section">
-                <pre class="ascii-art" aria-hidden="true">
- ____       _ _         ____  _ _
-|  _ \ __ _(_|_)_   __ / ___|(_) |_   ____ _
-| |_) / _` | | \ \ / / \___ \| | \ \ / / _` |
-|  _ &lt; (_| | | |\ V /   ___) | | |\ V / (_| |
-|_| \_\__,_|_|_| \_/   |____/|_|_| \_/ \__,_|
-                </pre>
-
-                <div class="hero-content">
-                    <div class="command-prompt">
-                        <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">whoami</span>
-                    </div>
-                    <div class="command-output hero-output">
-                        <div class="hero-text-block">
-                            <div>
-                                <h1 class="hero-name">Rajiv Silva</h1>
-                                <p class="hero-title" id="typed-title"></p>
-                                <p class="hero-tagline">QA Leader with <span class="highlight-green">14+ years</span> scaling quality organizations across <span class="highlight-cyan">Life Sciences</span>, <span class="highlight-amber">Fintech</span>, and <span class="highlight-magenta">Enterprise Security</span>.</p>
-                                <p class="hero-tagline">Early adopter of <span class="highlight-green">AI/ML in QA</span>. Building tools that ship quality at scale.</p>
-                                <p class="hero-location"><span class="dim">// </span>Kitchener, Ontario, Canada <span class="dim">|</span> Remote</p>
-                                <div class="hero-actions">
-                                    <a href="assets/resume.pdf" target="_blank" class="btn-resume">📄 View Resume</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="command-prompt">
-                        <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">neofetch</span>
-                    </div>
-                    <div class="command-output neofetch-block">
-                        <pre class="neofetch-ascii" aria-hidden="true">
-    ██████╗ ███████╗
-    ██╔══██╗██╔════╝
-    ██████╔╝███████╗
-    ██╔══██╗╚════██║
-    ██║  ██║███████║
-    ╚═╝  ╚═╝╚══════╝</pre>
-                        <div class="neofetch-info">
-                            <span><span class="nf-label">rajiv</span><span class="dim">@</span><span class="nf-label">portfolio</span></span>
-                            <span class="nf-separator">─────────────────────</span>
-                            <span><span class="nf-key">OS:</span> QA Engineer v14.0</span>
-                            <span><span class="nf-key">Host:</span> Kitchener, Ontario, Canada</span>
-                            <span><span class="nf-key">Kernel:</span> Life Sciences / Fintech</span>
-                            <span><span class="nf-key">Uptime:</span> 14+ years in industry</span>
-                            <span><span class="nf-key">Packages:</span> 30+ tools installed</span>
-                            <span><span class="nf-key">Shell:</span> /bin/automation</span>
-                            <span><span class="nf-key">Resolution:</span> Problem Solver</span>
-                            <span><span class="nf-key">Terminal:</span> This Website</span>
-                            <span><span class="nf-key">CPU:</span> Coffee-Powered</span>
-                            <span><span class="nf-key">Memory:</span> Unlimited Curiosity</span>
-                            <span class="nf-colors">██<span class="c1">██</span><span class="c2">██</span><span class="c3">██</span><span class="c4">██</span><span class="c5">██</span><span class="c6">██</span><span class="c7">██</span></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ABOUT -->
-            <section id="about" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">cat about.txt</span>
-                </div>
-                <div class="command-output">
-                    <div class="file-content">
-                        <p>I'm a QA leader and automation architect with <span class="highlight-green">14+ years</span> of experience — and I've spent the last two years going deep on <span class="highlight-green">AI/ML integration</span>. I don't just test software; I build AI-powered tools that transform how quality engineering works.</p>
-                        <br>
-                        <p>I build with <span class="highlight-cyan">Claude API</span>, <span class="highlight-cyan">Claude Vision</span>, <span class="highlight-cyan">structured output</span>, <span class="highlight-cyan">prompt engineering</span>, and <span class="highlight-cyan">agentic workflows</span>. Professionally, I've applied AI to automate test generation, build intelligent validation frameworks, and create QA tooling that uses LLMs to analyze requirements and catch gaps before code ships. On the side, I've shipped a desktop app that scores job postings against resumes using Claude, a news reader with AI fact-checking and deepfake video detection, and an AI Dungeon Master for D&D campaigns. These aren't experiments — they're full-stack, production applications.</p>
-                        <br>
-                        <p>My career spans <span class="highlight-amber">life sciences</span>, <span class="highlight-amber">fintech</span> (crypto exchange platforms), and <span class="highlight-amber">enterprise security</span> (encryption products). I've scaled QA organizations, built automation frameworks from scratch, and led teams at companies like <span class="highlight-cyan">Wellfield Technologies</span>, <span class="highlight-cyan">Connected</span>, and <span class="highlight-cyan">WinMagic</span>.</p>
-                        <br>
-                        <p>I'm looking for roles where I can combine my deep QA expertise with hands-on AI engineering — whether that's building <span class="highlight-green">AI-powered testing infrastructure</span>, developing <span class="highlight-green">LLM-based developer tools</span>, or leading quality for <span class="highlight-green">AI/ML products</span>. I ship fast, I automate everything, and I bring the rare combination of knowing both how to build AI systems and how to ensure they work reliably.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- EXPERIENCE -->
-            <section id="experience" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">git log --career --oneline</span>
-                </div>
-                <div class="command-output">
-                    <p class="output-comment"># Showing career history (newest first)</p>
-
-                    <div class="git-log">
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">a1b2c3d</span>
-                                <span class="git-branch">(HEAD -> career)</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Mar 2024 — Apr 2025</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>Senior Validation Engineer <span class="dim">@</span> <span class="highlight-green">Alira Health</span></h3>
-                                <span class="git-tag">Life Sciences</span>
-                                <span class="git-tag">Remote</span>
-                                <span class="git-tag">Toronto</span>
-                                <p>Led validation engineering for life sciences clients. Implemented AI-powered testing strategies and built automated validation frameworks for regulated environments.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">d4e5f6g</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Dec 2022 — Feb 2024</span> <span class="dim">· 1 yr 3 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Manager <span class="dim">@</span> <span class="highlight-amber">Wellfield Technologies</span> <span class="dim">(Coinmama)</span></h3>
-                                <span class="git-tag">Fintech</span>
-                                <span class="git-tag">Crypto</span>
-                                <span class="git-tag">Leadership</span>
-                                <p>Managed QA organization for cryptocurrency exchange platform. Defined QA strategy, led team of testers, established testing standards across web and mobile applications handling real financial transactions.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">h7i8j9k</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Dec 2020 — Dec 2022</span> <span class="dim">· 2 yrs 1 mo</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Lead <span class="dim">@</span> <span class="highlight-amber">Wellfield Technologies</span> <span class="dim">(Coinmama)</span></h3>
-                                <span class="git-tag">Fintech</span>
-                                <span class="git-tag">Automation</span>
-                                <p>Led QA efforts for crypto trading platform. Built automation frameworks from the ground up, established CI/CD testing pipelines, and mentored QA team members. Promoted to QA Manager.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">l0m1n2o</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Dec 2020 — Dec 2022</span> <span class="dim">· 2 yrs 1 mo</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Engineer — Lead <span class="dim">@</span> <span class="highlight-cyan">MoneyClip</span></h3>
-                                <span class="git-tag">Fintech</span>
-                                <span class="git-tag">API Testing</span>
-                                <p>Led QA engineering for fintech product. Designed API testing strategies, end-to-end automation suites, and quality gates for financial services.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">p3q4r5s</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Feb 2018 — Dec 2020</span> <span class="dim">· 2 yrs 11 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Automation Developer <span class="dim">@</span> <span class="highlight-cyan">Connected</span></h3>
-                                <span class="git-tag">Consulting</span>
-                                <span class="git-tag">Automation</span>
-                                <span class="git-tag">GTA</span>
-                                <p>Developed automation frameworks and testing solutions for enterprise clients. Built reusable testing infrastructure across web, mobile, and API testing projects.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">t6u7v8w</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Oct 2015 — Feb 2018</span> <span class="dim">· 2 yrs 5 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Specialist → QA Team Lead <span class="dim">@</span> <span class="highlight-magenta">WinMagic</span></h3>
-                                <span class="git-tag">Enterprise Security</span>
-                                <span class="git-tag">Encryption</span>
-                                <p>Built and led QA for enterprise encryption and data security software. Created automation suites covering Windows, Mac, and Linux. Promoted from Specialist to Team Lead.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">x9y0z1a</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jul — Oct 2015</span> <span class="dim">· 4 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>Technical Support Engineer <span class="dim">@</span> <span class="highlight-cyan">Expedia</span> <span class="dim">(Egencia)</span></h3>
-                                <span class="git-tag">Contract</span>
-                                <span class="git-tag">Travel Tech</span>
-                                <p>Technical support for Egencia corporate travel platform. DevOps and test case development.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry">
-                            <div class="git-header">
-                                <span class="git-hash">b2c3d4e</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Nov 2014 — Jul 2015</span> <span class="dim">· 9 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>Support Escalations Analyst <span class="dim">@</span> <span class="highlight-cyan">Microsoft</span></h3>
-                                <span class="git-tag">Enterprise</span>
-                                <span class="git-tag">Executive Escalations</span>
-                                <p>Handled hot-priority and executive escalations for enterprise customers across multiple product lines. Also served as Small Business Associate.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry dim-entry">
-                            <div class="git-header">
-                                <span class="git-hash">f5g6h7i</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jun 2014</span> <span class="dim">· 2 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>ICT Systems Administrator <span class="dim">@</span> Grand Challenges Canada</h3>
-                                <p>Systems administration and manual testing for global health innovation org.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry dim-entry">
-                            <div class="git-header">
-                                <span class="git-hash">j8k9l0m</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jun 2013 — Jan 2014</span> <span class="dim">· 8 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>ICT Hardware <span class="dim">@</span> Bell Canada</h3>
-                                <p>Hardware support and IT infrastructure.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry dim-entry">
-                            <div class="git-header">
-                                <span class="git-hash">n1o2p3q</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jan 2011 — Nov 2012</span> <span class="dim">· 1 yr 11 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>Freelance Programmer / Game Developer</h3>
-                                <span class="git-tag">Android</span>
-                                <span class="git-tag">XNA</span>
-                                <span class="git-tag">Indie</span>
-                                <p>Freelance Android apps and Microsoft XNA game projects. Where the coding journey began.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry dim-entry">
-                            <div class="git-header">
-                                <span class="git-hash">r4s5t6u</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jul — Oct 2010</span> <span class="dim">· 4 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>QA Analyst <span class="dim">@</span> Bedlam Games</h3>
-                                <span class="git-tag">Game Dev</span>
-                                <span class="git-tag">Origin Story</span>
-                                <p>Game QA — the first professional QA role. Where testing became a career path.</p>
-                            </div>
-                        </div>
-
-                        <div class="git-entry dim-entry">
-                            <div class="git-header">
-                                <span class="git-hash">v7w8x9y</span>
-                            </div>
-                            <div class="git-meta">
-                                <span class="git-date">Jun 2010 — Jan 2012</span> <span class="dim">· 1 yr 8 mos</span>
-                            </div>
-                            <div class="git-message">
-                                <h3>Connect Pro, Technical Associate <span class="dim">@</span> Future Shop</h3>
-                                <p>Consumer tech sales and technical support.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SKILLS -->
-            <section id="skills" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">ls -la ~/skills/</span>
-                </div>
-                <div class="command-output">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-green">▸</span> test-automation/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Selenium</span>
-                                <span class="skill-tag legendary">WebdriverIO</span>
-                                <span class="skill-tag legendary">Appium</span>
-                                <span class="skill-tag legendary">Cypress</span>
-                                <span class="skill-tag epic">Playwright</span>
-                                <span class="skill-tag epic">TestRail</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-cyan">▸</span> languages/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Python</span>
-                                <span class="skill-tag legendary">JavaScript</span>
-                                <span class="skill-tag legendary">TypeScript</span>
-                                <span class="skill-tag epic">Dart</span>
-                                <span class="skill-tag epic">C#</span>
-                                <span class="skill-tag standard">SQL</span>
-                                <span class="skill-tag standard">Bash</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-amber">▸</span> frameworks/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Django</span>
-                                <span class="skill-tag legendary">FastAPI</span>
-                                <span class="skill-tag epic">React</span>
-                                <span class="skill-tag epic">Vue.js</span>
-                                <span class="skill-tag epic">Flutter</span>
-                                <span class="skill-tag epic">Node.js</span>
-                                <span class="skill-tag standard">Express</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-magenta">▸</span> ai-ml/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Claude API</span>
-                                <span class="skill-tag legendary">AI/ML Testing</span>
-                                <span class="skill-tag legendary">LLM Test Gen</span>
-                                <span class="skill-tag epic">Prompt Engineering</span>
-                                <span class="skill-tag epic">Claude Vision</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-red">▸</span> devops/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Docker</span>
-                                <span class="skill-tag legendary">Jenkins</span>
-                                <span class="skill-tag legendary">CI/CD</span>
-                                <span class="skill-tag epic">CircleCI</span>
-                                <span class="skill-tag epic">GitHub Actions</span>
-                                <span class="skill-tag epic">AWS</span>
-                                <span class="skill-tag epic">Azure</span>
-                                <span class="skill-tag standard">BrowserStack</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-cyan">▸</span> data-and-tools/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag legendary">Git</span>
-                                <span class="skill-tag legendary">Postman</span>
-                                <span class="skill-tag epic">MongoDB</span>
-                                <span class="skill-tag epic">PostgreSQL</span>
-                                <span class="skill-tag epic">JIRA</span>
-                                <span class="skill-tag standard">Confluence</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3 class="skill-dir"><span class="highlight-green">▸</span> domains/</h3>
-                            <div class="skill-items">
-                                <span class="skill-tag domain">Life Sciences</span>
-                                <span class="skill-tag domain">Fintech / Crypto</span>
-                                <span class="skill-tag domain">Enterprise Security</span>
-                                <span class="skill-tag domain">Gaming</span>
-                                <span class="skill-tag domain">Travel Tech</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="output-comment"># Rarity: <span class="legendary">■ legendary</span>  <span class="epic">■ epic</span>  <span class="standard">■ standard</span></p>
-                </div>
-            </section>
-
-            <!-- PROJECTS -->
-            <section id="projects" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">ls -la ~/projects/</span>
-                </div>
-                <div class="command-output">
-
-                    <p class="output-comment"># ─── Work / QA Engineering ───────────────────────────────</p>
-                    <div class="projects-grid">
-                        <div class="project-card work-card">
-                            <div class="project-header">
-                                <span class="project-icon">🧪</span>
-                                <h3>API Test Framework</h3>
-                                <span class="project-status">○ QA</span>
-                            </div>
-                            <p class="project-desc">Python API test framework built with unittest. Designed for integration and endpoint testing with CI/CD integration via CircleCI. Auto-runs on push to branch or master.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>unittest</span><span>CircleCI</span><span>REST API</span>
-                            </div>
-                        </div>
-                        <div class="project-card work-card">
-                            <div class="project-header">
-                                <span class="project-icon">🌲</span>
-                                <h3>Cypress Test Framework</h3>
-                                <span class="project-status">○ QA</span>
-                            </div>
-                            <p class="project-desc">End-to-end test framework supporting Chrome, Firefox, and Electron. Configurable for headless CI or headed local development with IntelliJ integration.</p>
-                            <div class="project-stack">
-                                <span>JavaScript</span><span>Cypress</span><span>Chrome</span><span>Firefox</span><span>Electron</span>
-                            </div>
-                        </div>
-                        <div class="project-card work-card">
-                            <div class="project-header">
-                                <span class="project-icon">🔬</span>
-                                <h3>Selenium Framework</h3>
-                                <span class="project-status">○ QA</span>
-                            </div>
-                            <p class="project-desc">Python Selenium automation framework using geckodriver. Built with pytest for scalable browser-based test execution and reporting.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>Selenium</span><span>pytest</span><span>geckodriver</span>
-                            </div>
-                        </div>
-                        <div class="project-card work-card">
-                            <div class="project-header">
-                                <span class="project-icon">📱</span>
-                                <h3>Appium Mobile Framework</h3>
-                                <span class="project-status">○ QA</span>
-                            </div>
-                            <p class="project-desc">Mobile test automation framework using Appium on BrowserStack App Automate. Cross-device testing for Android and iOS applications in cloud infrastructure.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>Appium</span><span>BrowserStack</span><span>Mobile</span>
-                            </div>
-                        </div>
-                        <div class="project-card work-card">
-                            <div class="project-header">
-                                <span class="project-icon">🤖</span>
-                                <h3>CryptoBot QA Tooling</h3>
-                                <span class="project-status">○ QA</span>
-                            </div>
-                            <p class="project-desc">Slack bot for issuing test funds (ETH, BTC) from a Python-based crypto wallet. Built for QA and dev teams to streamline API testing on a cryptocurrency exchange platform.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>Slack Bot</span><span>Crypto</span><span>QA Tooling</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br>
-                    <p class="output-comment"># ─── Personal / AI Projects ──────────────────────────────</p>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">🔍</span>
-                                <h3>JobFinder</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Cross-platform desktop app (macOS/Windows) that scrapes LinkedIn for job postings and scores them against your resume. Guided first-run wizard, responsive card grid, three-tier geographic matching, and AI verification via Claude that re-reads full descriptions to catch mismatches.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>PySide6</span><span>Claude API</span><span>python-jobspy</span><span>APScheduler</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">📰</span>
-                                <h3>ReDAKT</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Multi-platform news reader with AI fact-checking via Claude, screenshot analysis via Claude Vision, AI-generated video deepfake detection, and YouTube integration. Full auth with 2FA. Flutter mobile app, FastAPI backend, Astro web frontend.</p>
-                            <div class="project-stack">
-                                <span>Flutter</span><span>FastAPI</span><span>Astro</span><span>PostgreSQL</span><span>Redis</span><span>Claude API</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">🐉</span>
-                                <h3>DnD Agent</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Web-based D&D virtual tabletop where the Dungeon Master is a Claude-powered AI agent. Players join via browser, speak by mic or type, roll dice, and view battle maps. AI DM narrates, controls NPCs, adjudicates rules, and speaks via ElevenLabs TTS.</p>
-                            <div class="project-stack">
-                                <span>FastAPI</span><span>Astro</span><span>React</span><span>WebSockets</span><span>Claude</span><span>ElevenLabs</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">🎨</span>
-                                <h3>ProEditor</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Agentic photo editor that uses Claude Vision to analyze images and suggest professional edits. Real-time preview with per-edit control for brightness, contrast, saturation, warmth, sharpness, and more. Includes AI background removal.</p>
-                            <div class="project-stack">
-                                <span>Python</span><span>Claude Vision</span><span>CustomTkinter</span><span>PIL</span><span>rembg</span><span>numpy</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">📋</span>
-                                <h3>TaskMaster</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Fully containerized project management platform with 14 granular permissions, project-specific databases, 10 switchable themes, card-based admin interface, and comprehensive audit logging.</p>
-                            <div class="project-stack">
-                                <span>Django</span><span>MongoDB</span><span>MongoEngine</span><span>Docker</span><span>Python</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">🏠</span>
-                                <h3>Shortlist</h3>
-                                <span class="project-status active">● ACTIVE</span>
-                            </div>
-                            <p class="project-desc">Household management app with real-time WebSocket chat, shared documents, event scheduling, and task management. PWA-enabled with Capacitor for Android. Async MongoDB via Beanie ODM.</p>
-                            <div class="project-stack">
-                                <span>FastAPI</span><span>React</span><span>TypeScript</span><span>MongoDB</span><span>Zustand</span><span>Capacitor</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <span class="project-icon">🐦</span>
-                                <h3>Flocks</h3>
-                                <span class="project-status">○ COMPLETE</span>
-                            </div>
-                            <p class="project-desc">Physics-based bird flocking puzzle game. Emergent behavior simulation with beautiful particle effects. Cross-platform via Flutter.</p>
-                            <div class="project-stack">
-                                <span>Flutter</span><span>Dart</span><span>Provider</span><span>Physics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- EDUCATION -->
-            <section id="education" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">cat education.txt &amp;&amp; cat certs.txt</span>
-                </div>
-                <div class="command-output">
-                    <div class="education-grid">
-                        <div class="edu-entry">
-                            <div class="edu-header">
-                                <span class="edu-year">2015</span>
-                                <h3>University of Toronto <span class="dim">— Mississauga</span></h3>
-                            </div>
-                            <p class="edu-degree">Certification in Project Management</p>
-                            <p class="edu-details">Comprehensive training consistent with PMBOK. Covered cost, time, quality, and risk management for large- and small-scale projects.</p>
-                        </div>
-                        <div class="edu-entry">
-                            <div class="edu-header">
-                                <span class="edu-year">2013</span>
-                                <h3>CompTIA A+ Certification</h3>
-                            </div>
-                            <p class="edu-degree">Computer Engineering Technologies</p>
-                            <p class="edu-details">Grade: 85% — Hardware, networking, and systems troubleshooting.</p>
-                        </div>
-                        <div class="edu-entry">
-                            <div class="edu-header">
-                                <span class="edu-year">2010–2011</span>
-                                <h3>Quest Learning</h3>
-                            </div>
-                            <p class="edu-degree">Diploma in SAP Basis Administration</p>
-                            <p class="edu-details">SAP system administration, configuration, and maintenance.</p>
-                        </div>
-                        <div class="edu-entry">
-                            <div class="edu-header">
-                                <span class="edu-year">2008–2010</span>
-                                <h3>triOS College</h3>
-                            </div>
-                            <p class="edu-degree">Diploma in Video Game Design &amp; Development</p>
-                            <p class="edu-details">Computer Science — Game design, programming, and development. The spark that started it all.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CONTACT -->
-            <section id="contact" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">cat contact.txt</span>
-                </div>
-                <div class="command-output">
-                    <div class="contact-block">
-                        <pre class="contact-ascii">
-┌──────────────────────────────────────────────────┐
-│                  GET IN TOUCH                    │
-│                                                  │
-│  Always open to interesting conversations about  │
-│  QA, automation, AI, or game dev.                │
-└──────────────────────────────────────────────────┘</pre>
-                        <div class="contact-links">
-                            <a href="mailto:rajivshehan@gmail.com" class="contact-link">
-                                <span class="contact-label">email</span>
-                                <span class="contact-value">rajivshehan@gmail.com</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/rajiv-silva/" target="_blank" rel="noopener" class="contact-link">
-                                <span class="contact-label">linkedin</span>
-                                <span class="contact-value">linkedin.com/in/rajiv-silva</span>
-                            </a>
-                            <a href="https://github.com/shehan-sj" target="_blank" rel="noopener" class="contact-link">
-                                <span class="contact-label">github</span>
-                                <span class="contact-value">github.com/shehan-sj</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- INTERACTIVE TERMINAL -->
-            <section id="terminal-section" class="section">
-                <div class="command-prompt">
-                    <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">interactive --shell</span>
-                </div>
-                <div class="command-output">
-                    <p class="output-comment"># Type 'help' for available commands. Try 'neofetch' or 'sudo'.</p>
-                    <div id="terminal-output"></div>
-                    <div class="input-line">
-                        <span class="prompt-user">visitor</span>:<span class="prompt-path">~</span>$&nbsp;
-                        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- Status Bar -->
-        <footer class="status-bar">
-            <div class="status-left">
-                <span class="status-indicator">●</span> ONLINE
-                <span class="dim">|</span>
-                <span>UPTIME: 14+ yrs</span>
-            </div>
-            <div class="status-center">
-                <span class="dim">[ </span>rajiv@portfolio<span class="dim"> ]</span>
-            </div>
-            <div class="status-right">
-                <span id="status-time"></span>
-            </div>
-        </footer>
+  <!-- ═══════════ CASE STUDIES ═══════════ -->
+  <section class="wrap" id="work">
+    <div class="sec-head" data-reveal>
+      <p class="sec-kicker">Selected Work</p>
+      <h2>Four environments, one approach</h2>
+      <p>
+        Encryption software that cannot afford a bad build. An exchange moving real money.
+        A framework layer that decides what gets tested and where. And the AI work that is
+        changing how all of it gets done. Different constraints every time — the method travels.
+      </p>
     </div>
 
-    <!-- Cover Letter Modal (hidden) -->
-    <div id="cover-letter-modal" class="modal-overlay" style="display:none;">
-        <div class="modal-box">
-            <div class="modal-header">
-                <span class="prompt-user">rajiv@portfolio</span>:<span class="prompt-path">~</span>$ <span class="typed-command">generate-cover-letter</span>
-                <button class="modal-close" id="modal-close">&times;</button>
-            </div>
+    <div class="cases">
 
-            <!-- Step 1: Pick template -->
-            <div id="cl-step-1" class="modal-step">
-                <p class="output-comment"># Select a template:</p>
-                <div class="cl-templates">
-                    <button class="cl-template-btn" data-template="senior-qa">Senior QA Engineer</button>
-                    <button class="cl-template-btn" data-template="qa-lead">QA Lead</button>
-                    <button class="cl-template-btn" data-template="qa-manager">QA Manager</button>
-                    <button class="cl-template-btn" data-template="gen-ai-qa">Gen AI QA Agent</button>
-                </div>
-            </div>
+      <!-- ── 01 · WinMagic ── -->
+      <article class="case" data-reveal>
+        <aside class="case-aside">
+          <div class="case-num">01</div>
+          <dl class="case-meta">
+            <div><dt>Role</dt><dd>QA Specialist → QA Team Lead</dd></div>
+            <div><dt>Company</dt><dd>WinMagic</dd></div>
+            <div><dt>Period</dt><dd>Oct 2015 — Feb 2018</dd></div>
+            <div><dt>Domain</dt><dd>Enterprise encryption &amp; data security</dd></div>
+          </dl>
+        </aside>
 
-            <!-- Step 2: Enter details -->
-            <div id="cl-step-2" class="modal-step" style="display:none;">
-                <p class="output-comment"># Enter job details:</p>
-                <div class="cl-form">
-                    <label>Company name:
-                        <input type="text" id="cl-company" placeholder="e.g. Anthropic" autocomplete="off">
-                    </label>
-                    <label>Job title:
-                        <input type="text" id="cl-job-title" placeholder="e.g. Senior QA Engineer" autocomplete="off">
-                    </label>
-                    <button class="cl-generate-btn" id="cl-generate">Generate PDF</button>
-                    <button class="cl-back-btn" id="cl-back">&larr; Back</button>
-                </div>
-            </div>
+        <div class="case-body">
+          <p class="case-domain">Enterprise Security · Cross-Platform</p>
+          <h3>Testing software that can brick a machine if it is wrong</h3>
+          <p class="case-lede">
+            Full-disk encryption sits underneath the operating system. When it misbehaves, users
+            do not see a broken button — they see a machine that will not boot. That raises the
+            cost of an escaped defect far beyond a normal application, and it has to hold true on
+            Windows, Mac, and Linux simultaneously.
+          </p>
 
-            <!-- Step 3: Done -->
-            <div id="cl-step-3" class="modal-step" style="display:none;">
-                <p class="cl-success">✓ Cover letter generated and downloading...</p>
-                <button class="cl-template-btn" id="cl-another">Generate Another</button>
-            </div>
+          <div class="case-block">
+            <h4>The situation</h4>
+            <p>
+              Enterprise security software is judged on consistency across a fragmented estate.
+              The same product had to behave identically across three operating systems and the
+              hardware variations underneath them, which multiplies the test matrix fast and makes
+              manual coverage impossible to sustain.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h4>What I did</h4>
+            <p>
+              I built automation suites spanning <b>Windows, Mac, and Linux</b> so the same
+              verification ran everywhere rather than being repeated by hand per platform. Working
+              this close to the OS also meant owning environment and release mechanics, not just
+              test cases — the DevOps side of getting builds provisioned, installed, and verified
+              reliably.
+            </p>
+            <p>
+              I joined as a QA Specialist and was promoted to <b>QA Team Lead</b>, taking on
+              direction for the QA effort and the people doing it.
+            </p>
+          </div>
+
+          <div class="pull">
+            <p>Cross-platform parity is not a testing detail. It is the product promise, and automation is the only way to keep it honest.</p>
+          </div>
+
+          <div class="case-block">
+            <h4>Why it matters for a leadership hire</h4>
+            <p>
+              This is the environment that taught me low-level rigour: deep platform constraints,
+              a high blast radius for mistakes, and a matrix that only automation can hold.
+              It is a very different discipline from web QA, and being able to move between the
+              two is the point.
+            </p>
+          </div>
+
+          <div class="case-tags">
+            <span>Windows · Mac · Linux</span><span>Encryption</span><span>Release Engineering</span>
+            <span>Automation Suites</span><span>Team Lead</span>
+          </div>
         </div>
+      </article>
+
+      <!-- ── 02 · Crypto exchange ── -->
+      <article class="case" data-reveal>
+        <aside class="case-aside">
+          <div class="case-num">02</div>
+          <dl class="case-meta">
+            <div><dt>Role</dt><dd>QA Lead → QA Manager</dd></div>
+            <div><dt>Company</dt><dd>Wellfield Technologies (Coinmama)</dd></div>
+            <div><dt>Period</dt><dd>Dec 2020 — Feb 2024</dd></div>
+            <div><dt>Domain</dt><dd>Cryptocurrency exchange</dd></div>
+          </dl>
+        </aside>
+
+        <div class="case-body">
+          <p class="case-domain">Fintech · Building a QA Function</p>
+          <h3>Standing up quality on a platform moving real money</h3>
+          <p class="case-lede">
+            A crypto exchange has a property most software does not: transactions are irreversible.
+            There is no support ticket that undoes a bad transfer. I arrived as QA Lead with the
+            automation layer essentially unbuilt, and left as QA Manager owning strategy, standards,
+            and the team.
+          </p>
+
+          <div class="case-block">
+            <h4>The situation</h4>
+            <p>
+              Quality needed to be established rather than improved. There was no automation
+              foundation to extend, no pipeline gating releases, and no shared standard for what
+              "tested" meant across web and mobile — on a product handling live customer funds.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h4>What I did</h4>
+            <p>
+              I built the <b>automation frameworks from the ground up</b> and established
+              <b>CI/CD testing pipelines</b> so verification became part of the release path
+              instead of a step someone remembered to run. I then defined the QA strategy and
+              testing standards across web and mobile so quality was consistent across surfaces
+              rather than per-team habit.
+            </p>
+            <p>
+              Alongside the technical build I <b>mentored the QA team</b>, which is what turned a
+              set of tools into a function that could operate without me in the loop. That
+              organisational impact is what took me from Lead to <b>QA Manager</b>.
+            </p>
+          </div>
+
+          <div class="pull">
+            <p>Building the frameworks was the straightforward half. Building the team and the standards is what made it survive.</p>
+          </div>
+
+          <div class="case-block">
+            <h4>Why it matters for a leadership hire</h4>
+            <p>
+              This is the clearest evidence of the job I am targeting: take a QA function from
+              nothing to something an engineering organisation depends on, under real financial
+              stakes, and grow the people at the same time.
+            </p>
+          </div>
+
+          <div class="case-tags">
+            <span>QA Strategy</span><span>Team Leadership</span><span>CI/CD Gating</span>
+            <span>Web &amp; Mobile</span><span>Promoted to Manager</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 03 · Framework suite ── -->
+      <article class="case" data-reveal>
+        <aside class="case-aside">
+          <div class="case-num">03</div>
+          <dl class="case-meta">
+            <div><dt>Focus</dt><dd>Test architecture</dd></div>
+            <div><dt>Scope</dt><dd>API · Web · Mobile</dd></div>
+            <div><dt>Built with</dt><dd>Python · JavaScript · CircleCI</dd></div>
+            <div><dt>Repositories</dt><dd>Four frameworks, still in use</dd></div>
+          </dl>
+        </aside>
+
+        <div class="case-body">
+          <p class="case-domain">QA Architecture · Automation</p>
+          <h3>Deciding what gets tested, and where it runs</h3>
+          <p class="case-lede">
+            Automation is not one framework — it is a set of deliberate choices about which layer
+            catches which class of defect, and which of those checks are allowed to block a
+            release. I have built that layer several times across different stacks.
+          </p>
+
+          <div class="case-block">
+            <h4>The API layer</h4>
+            <p>
+              A Python integration and endpoint framework on <b>unittest</b>, wired into
+              <b>CircleCI</b> to run automatically on every push to a branch or to master. Fast,
+              cheap, and positioned to catch contract and integration breaks before anything
+              slower runs.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h4>The browser layer</h4>
+            <p>
+              A <b>Cypress</b> end-to-end suite covering Chrome, Firefox, and Electron, built to
+              run headless in CI and headed locally with IDE run configurations so a developer can
+              debug a single failing spec without fighting the harness. Separately, a
+              <b>Selenium</b> framework on geckodriver for Python-side browser automation.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h4>The mobile layer</h4>
+            <p>
+              Mobile coverage through <b>Appium</b> on <b>BrowserStack App Automate</b>, so device
+              breadth came from cloud infrastructure rather than a drawer full of handsets.
+            </p>
+          </div>
+
+          <div class="pull">
+            <p>The architecture question is never "can we automate this". It is "which layer should catch this, and should it stop the release".</p>
+          </div>
+
+          <div class="case-block">
+            <h4>Why it matters for a leadership hire</h4>
+            <p>
+              A QA leader who cannot reason about the automation stack ends up approving plans
+              they cannot evaluate. I have built these layers myself, in more than one language
+              and CI system, which is what lets me make the trade-offs credibly and review the
+              work of engineers doing it.
+            </p>
+          </div>
+
+          <div class="case-links">
+            <a href="https://github.com/shehan-sj/api-test-framework" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              api-test-framework
+            </a>
+            <a href="https://github.com/shehan-sj/cypress-test-framework" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              cypress-test-framework
+            </a>
+            <a href="https://github.com/shehan-sj/selenium-framework" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              selenium-framework
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 04 · AI for QA ── -->
+      <article class="case" data-reveal>
+        <aside class="case-aside">
+          <div class="case-num">04</div>
+          <dl class="case-meta">
+            <div><dt>Focus</dt><dd>AI implementation for QA</dd></div>
+            <div><dt>Applied at</dt><dd>Alira Health · regulated validation</dd></div>
+            <div><dt>Built with</dt><dd>Claude API · Vision · agentic workflows</dd></div>
+            <div><dt>Proof</dt><dd>Shipped production applications</dd></div>
+          </dl>
+        </aside>
+
+        <div class="case-body">
+          <p class="case-domain">Applied AI · The Next Layer</p>
+          <h3>Putting language models on the parts of QA that never scaled</h3>
+          <p class="case-lede">
+            Some quality work has always resisted automation: reading a requirements document and
+            noticing what is missing, generating tests that reflect context rather than a template,
+            re-checking whether a result actually means what it claims. That work is now tractable,
+            and I have been building it rather than waiting for a vendor to sell it to me.
+          </p>
+
+          <div class="case-block">
+            <h4>In the validation role</h4>
+            <p>
+              At Alira Health I led validation engineering for life sciences clients and built
+              automated validation frameworks for <b>regulated environments</b>, introducing
+              AI-assisted testing into a setting where every step has to be defensible. Regulated
+              work is the hardest place to adopt new methods, which makes it the most useful place
+              to prove they hold up.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h4>What I build with it</h4>
+            <p>
+              Tooling that reads requirements and surfaces the gaps before code exists. Test
+              generation driven by context instead of boilerplate. Verification steps that re-read
+              their own output and correct it. The stack is the <b>Claude API</b>, Claude Vision,
+              structured output, and agentic workflows — plus locally hosted models via
+              <b>Ollama</b> with retrieval, for when data cannot leave the machine.
+            </p>
+          </div>
+
+          <div class="pull">
+            <p>Calling an API is easy. Knowing which quality problems are worth pointing a model at, and how to verify the answer, is the part fifteen years of QA pays for.</p>
+          </div>
+
+          <div class="case-block">
+            <h4>The proof</h4>
+            <p>
+              <b>LANA.AI</b> — a self-hosted assistant running entirely offline on Ollama, with
+              persistent memory, a retrieval knowledge base over documents, and agentic task
+              scheduling. <b>JobFinder</b> — a cross-platform desktop application that scores
+              postings against a résumé and then uses a verification pass to re-read each source
+              and correct its own scoring. Both are shipped software with installers, not
+              notebooks.
+            </p>
+          </div>
+
+          <div class="case-links">
+            <a href="https://github.com/shehan-sj/project-lana" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              project-lana
+            </a>
+            <a href="https://github.com/shehan-sj/JobFinder" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              JobFinder
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CAREER ═══════════ -->
+  <section class="wrap" id="career">
+    <div class="sec-head" data-reveal>
+      <p class="sec-kicker">Career</p>
+      <h2>Fifteen years, five industries</h2>
+      <p>Progression from hands-on test engineering through automation architecture into QA leadership.</p>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="js/main.js"></script>
+    <div class="career" data-reveal>
+      <div class="career-row"><span class="career-when">Mar 2024 — Apr 2025</span><span class="career-what">Senior Validation Engineer · <i>Alira Health</i></span><span class="career-where">Life Sciences</span></div>
+      <div class="career-row"><span class="career-when">Dec 2022 — Feb 2024</span><span class="career-what">QA Manager · <i>Wellfield Technologies</i></span><span class="career-where">Fintech</span></div>
+      <div class="career-row"><span class="career-when">Dec 2020 — Dec 2022</span><span class="career-what">QA Lead · <i>Wellfield Technologies</i></span><span class="career-where">Fintech</span></div>
+      <div class="career-row"><span class="career-when">Dec 2020 — Dec 2022</span><span class="career-what">QA Engineer, Lead · <i>MoneyClip</i></span><span class="career-where">Fintech</span></div>
+      <div class="career-row"><span class="career-when">Feb 2018 — Dec 2020</span><span class="career-what">QA Automation Developer · <i>Connected</i></span><span class="career-where">Consulting</span></div>
+      <div class="career-row"><span class="career-when">Oct 2015 — Feb 2018</span><span class="career-what">QA Specialist → QA Team Lead · <i>WinMagic</i></span><span class="career-where">Enterprise Security</span></div>
+      <div class="career-row"><span class="career-when">Jul 2015 — Oct 2015</span><span class="career-what">Technical Support Engineer · <i>Expedia (Egencia)</i></span><span class="career-where">Travel Tech</span></div>
+      <div class="career-row"><span class="career-when">Nov 2014 — Jul 2015</span><span class="career-what">Support Escalations Analyst · <i>Microsoft</i></span><span class="career-where">Enterprise</span></div>
+      <div class="career-row"><span class="career-when">Jul 2010 — Oct 2010</span><span class="career-what">QA Analyst · <i>Bedlam Games</i></span><span class="career-where">Gaming</span></div>
+    </div>
+    <p class="career-note" data-reveal>
+      <b>Also —</b> ICT systems administration at Grand Challenges Canada, ICT hardware at Bell
+      Canada, and freelance Android and Microsoft XNA game development between 2010 and 2014.
+      <b>Education —</b> Project Management certification (University of Toronto, 2015),
+      CompTIA A+ (2013), SAP Basis Administration diploma (2011), and a diploma in Video Game
+      Design &amp; Development (triOS College, 2010).
+    </p>
+  </section>
+
+  <!-- ═══════════ CAPABILITIES ═══════════ -->
+  <section class="wrap" id="capabilities">
+    <div class="sec-head" data-reveal>
+      <p class="sec-kicker">Capabilities</p>
+      <h2>What I work with</h2>
+    </div>
+
+    <div class="caps" data-reveal>
+      <div class="cap">
+        <h3>Leadership</h3>
+        <ul>
+          <li class="lead">QA strategy</li><li class="lead">Team building</li><li class="lead">Mentoring</li>
+          <li>Standards &amp; process</li><li>Release gating</li><li>Regulated validation</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3>Test Automation</h3>
+        <ul>
+          <li class="lead">Selenium</li><li class="lead">Cypress</li><li class="lead">Appium</li>
+          <li>Playwright</li><li>WebdriverIO</li><li>pytest</li><li>unittest</li><li>TestRail</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3>AI for Quality</h3>
+        <ul>
+          <li class="lead">Claude API</li><li class="lead">Agentic workflows</li><li class="lead">RAG</li>
+          <li>Claude Vision</li><li>Structured output</li><li>Ollama</li><li>ChromaDB</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3>Engineering</h3>
+        <ul>
+          <li class="lead">Python</li><li class="lead">TypeScript</li><li class="lead">JavaScript</li>
+          <li>FastAPI</li><li>Django</li><li>React</li><li>Flutter</li><li>Dart</li><li>SQL</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3>Infrastructure</h3>
+        <ul>
+          <li class="lead">Docker</li><li class="lead">CI/CD</li><li>CircleCI</li><li>Jenkins</li>
+          <li>GitHub Actions</li><li>AWS</li><li>Azure</li><li>BrowserStack</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3>Data</h3>
+        <ul>
+          <li class="lead">PostgreSQL</li><li class="lead">MongoDB</li><li>Redis</li>
+          <li>WebSockets</li><li>REST</li><li>Postman</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head" data-reveal style="padding-top:4.5rem">
+      <p class="sec-kicker">Also Built</p>
+      <h2>Other work on GitHub</h2>
+    </div>
+    <div class="repos" data-reveal>
+      <a class="repo-row" href="https://github.com/shehan-sj/cryptobot-framework" target="_blank" rel="noopener"><b>CryptoBot QA Tooling</b><i>Slack bot · test funds</i></a>
+      <a class="repo-row" href="https://github.com/shehan-sj/taskmaster" target="_blank" rel="noopener"><b>TaskMaster</b><i>Django · MongoDB · Docker</i></a>
+      <a class="repo-row" href="https://github.com/shehan-sj/dnd-agent" target="_blank" rel="noopener"><b>DnD Agent</b><i>FastAPI · AI game master</i></a>
+      <a class="repo-row" href="https://shehan-sj.github.io/brw-revamp/" target="_blank" rel="noopener"><b>Big Rig Wraps</b><i>Client site · live</i></a>
+      <a class="repo-row" href="https://github.com/shehan-sj/mynews" target="_blank" rel="noopener"><b>ReDAKT</b><i>Flutter · iOS &amp; Android</i></a>
+      <a class="repo-row" href="https://github.com/shehan-sj" target="_blank" rel="noopener"><b>All repositories</b><i>@shehan-sj</i></a>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="wrap contact" id="contact">
+    <h2 data-reveal>Looking for a QA leadership role.</h2>
+    <p data-reveal>
+      Remote or hybrid out of Kitchener–Waterloo, Ontario. If you are building a quality
+      function, rebuilding one, or trying to work out what AI actually changes about testing,
+      I would be glad to talk.
+    </p>
+    <div class="contact-links" data-reveal>
+      <a href="mailto:rajivshehan@gmail.com"><span class="ck">Email</span><span class="cv">rajivshehan@gmail.com</span></a>
+      <a href="https://www.linkedin.com/in/rajiv-silva/" target="_blank" rel="noopener"><span class="ck">LinkedIn</span><span class="cv">/in/rajiv-silva</span></a>
+      <a href="https://github.com/shehan-sj" target="_blank" rel="noopener"><span class="ck">GitHub</span><span class="cv">@shehan-sj</span></a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener"><span class="ck">Document</span><span class="cv">Résumé (PDF)</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <button class="foot-mark" id="foot-mark" aria-label="Rajiv Silva" title="Rajiv Silva">RS</button>
+  <p>Rajiv Silva · Kitchener, Ontario</p>
+  <span>15+ years in quality</span>
+</footer>
+
+<!-- ═══════════ COVER LETTER (hidden utility) ═══════════ -->
+<div id="cl-modal" class="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cl-heading">
+    <button class="modal-x" id="cl-close" aria-label="Close">&times;</button>
+    <span class="modal-kicker">Private utility</span>
+    <h2 id="cl-heading">Cover Letter</h2>
+
+    <div id="cl-step-1" class="cl-step">
+      <p class="cl-hint">Choose a template.</p>
+      <div class="cl-templates">
+        <button class="cl-tpl" data-template="senior-qa"><b>Senior QA Engineer</b><i>Technical depth &amp; AI adoption</i></button>
+        <button class="cl-tpl" data-template="qa-lead"><b>QA Lead</b><i>Team building &amp; process</i></button>
+        <button class="cl-tpl" data-template="qa-manager"><b>QA Manager</b><i>Strategy &amp; people</i></button>
+        <button class="cl-tpl" data-template="gen-ai-qa"><b>Gen AI QA</b><i>Applied AI in quality</i></button>
+      </div>
+    </div>
+
+    <div id="cl-step-2" class="cl-step" hidden>
+      <p class="cl-hint">Enter the job details.</p>
+      <label class="cl-field"><span>Company</span><input type="text" id="cl-company" placeholder="Anthropic" autocomplete="off"></label>
+      <label class="cl-field"><span>Job title</span><input type="text" id="cl-job-title" placeholder="QA Manager" autocomplete="off"></label>
+      <div class="cl-actions">
+        <button class="btn btn-ghost" id="cl-back">Back</button>
+        <button class="btn btn-solid" id="cl-generate">Generate PDF</button>
+      </div>
+    </div>
+
+    <div id="cl-step-3" class="cl-step" hidden>
+      <p class="cl-done">Cover letter generated and downloading.</p>
+      <button class="btn btn-ghost" id="cl-another">Generate another</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ PALETTE SWITCHER ═══════════ -->
+<div class="palette" id="palette">
+  <button type="button" class="palette-toggle" id="palette-toggle"
+          aria-expanded="false" aria-controls="palette-panel">
+    <span>Colours</span>
+  </button>
+  <div class="palette-panel" id="palette-panel" role="group" aria-label="Colour palette" hidden>
+    <p>Palette</p>
+    <button type="button" class="palette-opt" data-theme=""         style="--sw-bg:#0a1020;--sw-accent:#6f9dea">Midnight + ice <i>default</i></button>
+    <button type="button" class="palette-opt" data-theme="navy"     style="--sw-bg:#0d1526;--sw-accent:#c47a4d">Ink navy + copper</button>
+    <button type="button" class="palette-opt" data-theme="graphite" style="--sw-bg:#131316;--sw-accent:#d2a24c">Graphite + amber</button>
+    <button type="button" class="palette-opt" data-theme="slate"    style="--sw-bg:#0e1a1f;--sw-accent:#4fb3a4">Slate + teal</button>
+    <button type="button" class="palette-opt" data-theme="forest"   style="--sw-bg:#0c1813;--sw-accent:#c3a878">Forest + sand</button>
+    <button type="button" class="palette-opt" data-theme="paper"    style="--sw-bg:#f4f1ea;--sw-accent:#a8542a">Paper <i>light</i></button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
